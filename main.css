@@ -1,33 +1,43 @@
-/* Basic Button Style */
-.custom-button {
-    background-color: #4CAF50; /* Background color */
-    color: white; /* Text color */
-    padding: 200px 200px; /* Padding */
-    border: none; /* Remove default border */
-    border-radius: 0px; /* Rounded corners */
-    font-size: 16px; /* Font size */
-    cursor: pointer; /* Pointer cursor on hover */
-    box-shadow: 0 4px 100px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle 3D effect */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
-/* Hover Effect */
-.custom-button:hover {
-    background-color: #45a049; /* Darker background on hover */
-    transform: translateY(-2px); /* Slightly move up on hover */
+.dropdown {
+    position: relative;
+    display: inline-block;
 }
-
-/* Active (Click) Effect */
-.custom-button:active {
-    background-color: #3e8e41; /* Even darker background on click */
-    transform: translateY(0); /* Reset position */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduce shadow on click */
+.operator {
+    display: block;
+    padding: 10px 30px;
+    background-color: #4CAF50;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
 }
-
-/* Disabled Button */
-.custom-button:disabled {
-    background-color: #cccccc; /* Gray background for disabled button */
-    color: #666666; /* Darker text color */
-    cursor: not-allowed; /* Not-allowed cursor */
-    box-shadow: none; /* Remove shadow */
+.operator:hover {
+    background-color: blue;
+}
+.dropdown-operator {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 20px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+.dropdown-operator a {
+    color: black;
+    padding: 12px 50px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-operator a:hover {
+    background-color: #f1f1f1;
+}
+.dropdown:hover .dropdown-operator{
+    display: block;
 }
