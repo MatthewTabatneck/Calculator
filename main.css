@@ -1,0 +1,33 @@
+/* Basic Button Style */
+.custom-button {
+    background-color: #4CAF50; /* Background color */
+    color: white; /* Text color */
+    padding: 200px 200px; /* Padding */
+    border: none; /* Remove default border */
+    border-radius: 0px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 0 4px 100px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle 3D effect */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+/* Hover Effect */
+.custom-button:hover {
+    background-color: #45a049; /* Darker background on hover */
+    transform: translateY(-2px); /* Slightly move up on hover */
+}
+
+/* Active (Click) Effect */
+.custom-button:active {
+    background-color: #3e8e41; /* Even darker background on click */
+    transform: translateY(0); /* Reset position */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduce shadow on click */
+}
+
+/* Disabled Button */
+.custom-button:disabled {
+    background-color: #cccccc; /* Gray background for disabled button */
+    color: #666666; /* Darker text color */
+    cursor: not-allowed; /* Not-allowed cursor */
+    box-shadow: none; /* Remove shadow */
+}
