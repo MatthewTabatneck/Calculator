@@ -51,6 +51,10 @@
   margin-bottom: 0.5rem; /* Space between the label and input */
 }
 
+.dropdown option {
+  background-color: gray;
+}
+
 /* Media query for smaller screens */
 @media (max-width: 768px) {
   .containment {
