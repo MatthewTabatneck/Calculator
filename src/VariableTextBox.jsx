@@ -1,6 +1,6 @@
-export function VariableTextBox({ label, value, onChange }) {
+export function VariableTextBox({ className, label, value, onChange }) {
   return (
-    <div className="Variable1">
+    <div className={className}>
       <label htmlFor="item">{label}</label>
       <input
         value={value}

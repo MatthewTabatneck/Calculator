@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { VariableTextBox } from "./VariableTextBox";
 import { OperatorDropDown } from "./OperatorDropDown";
+import "./App.css";
 
 export default function App() {
   const [firstVariable, setFirstVariable] = useState("");
@@ -26,20 +27,22 @@ export default function App() {
   };
 
   return (
-    <>
+    <div className="containment">
       <VariableTextBox
-        label="First Variable"
+        className="first-variable"
+        label="First Variable:"
         value={firstVariable}
         onChange={setFirstVariable}
       />
       <VariableTextBox
-        label="Second Variable"
+        className="second-variable"
+        label="Second Variable:"
         value={secondVariable}
         onChange={setSecondVariable}
       />
       <OperatorDropDown value={operator} onChange={setOperator} />
 
       <p>Result: {calculateResult()}</p>
-    </>
+    </div>
   );
 }

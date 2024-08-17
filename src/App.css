@@ -1,0 +1,68 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: white;
+    color: black;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: rgb(48, 46, 48);
+    color: rgb(200, 203, 204);
+  }
+}
+
+.containment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem; /* Space between each container */
+  height: 100vh; /* Ensure the containers take up the full height of the viewport */
+  flex-wrap: wrap; /* Allow wrapping when screen size decreases */
+}
+
+.first-variable,
+.second-variable,
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  width: 250px; /* Set a fixed width or max-width for consistent wrapping */
+}
+
+.first-variable label,
+.second-variable label,
+.dropdown label {
+  margin-bottom: 0.5rem; /* Space between the label and input */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .containment {
+    flex-direction: column; /* Stack the items vertically on smaller screens */
+    gap: 2rem; /* Reduce the gap for stacked layout */
+    height: auto; /* Let the height adjust automatically */
+  }
+
+  .first-variable,
+  .second-variable,
+  .dropdown {
+    width: 100%; /* Allow full width on small screens */
+    max-width: 100%; /* Make sure they take full width when stacked */
+  }
+}

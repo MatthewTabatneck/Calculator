@@ -1,6 +1,6 @@
 export function OperatorDropDown({ value, onChange }) {
   return (
-    <div>
+    <div className="dropdown">
       <label htmlFor="dropdown">Operator?</label>
       <select
         id="dropdown"
